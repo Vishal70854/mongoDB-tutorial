@@ -14,13 +14,18 @@ db.inventory.findOne( { status: "D" } )
 db.inventory.find( { status: { $in: [ "A", "D" ] } } )
 
 // AND command in mongo db
-// get all documents where type = movie and runtime > 100
-db.inventory.find( { type: "movie", runtime: { $gte: 100 } } )
+// get all documents where status = A and qty < 30
+db.inventory.find( { status: "A", qty: { $lt: 30 } } )
 
 // OR command in mongo db
-// get all documents where rated = "S" and (either year > 2010 or type = "series")
+// get all documents where status = "A" and (either status = A pr qty < 30)
 // $or means it will check either of the values mention within the array
 db.inventory.find( {
-    rated : "S",
-    $or: [ { year: { $gte: 2010 } }, { type: "series" } ]
+    status : "A",
+    $or: [ { status: "A" }, { qty: { $lt: 30 } } ]
 } )
+
+
+    
+
+ 

@@ -12,3 +12,6 @@
 
 ## MongoDB Atlas
 *https://cloud.mongodb.com/v2/652a3df34c675d3d9d3f3e7e#/clusters
+
+## MongoDB Aggregation Pipeline
+*https://www.mongodb.com/docs/mongodb-shell/run-agg-pipelines/
